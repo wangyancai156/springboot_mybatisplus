@@ -32,4 +32,8 @@ public class UserService {
     public List<User> selectALlUserList() {
         return userMapper.selectList(new QueryWrapper<>());
     }
+
+    public  User getUserByid() {
+        return userMapper.selectById(1);
+    }
 }

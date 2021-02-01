@@ -37,6 +37,14 @@ public class UserController {
         result.put("data", userService.selectALlUserList());
         result.put("msg", "success");
         return result;
+    }
 
+    @GetMapping("user")
+    public Map<String, Object> getUserById() {
+        Map<String, Object> result = new HashMap<>();
+        result.put("code", 200);
+        result.put("data", userService.getUserByid());
+        result.put("msg", "success");
+        return result;
     }
 }
